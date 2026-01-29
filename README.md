@@ -2,6 +2,8 @@
 
 A web-based interface for managing TimeKpr parental controls across multiple computers in your network.
 
+This version has been updated to better integrate with Portainer.
+
 ![Timekpr Dashboard](docs/dashboard.png)
 
 ## Features
@@ -89,6 +91,7 @@ sudo chmod 700 /home/timekpr-remote/.ssh
 scp ./ssh/timekpr_ui_key.pub user@TARGET_COMPUTER_IP:/tmp/
 
 # On the remote computer, add the key to authorized_keys
+sudo su
 sudo cat /tmp/timekpr_ui_key.pub >> /home/timekpr-remote/.ssh/authorized_keys
 sudo chmod 600 /home/timekpr-remote/.ssh/authorized_keys
 sudo chown -R timekpr-remote:timekpr-remote /home/timekpr-remote/.ssh
